@@ -5,7 +5,7 @@ mount /dev/sda3 /mnt &&
 mount --mkdir /dev/sda1 /mnt/boot/efi &&
 swapon /dev/sda2 &&
 pacman -Syy archlinux-keyring figlet --noconfirm &&
-pacstrap /mnt gnome-shell gnome-terminal eog gnome-control-center gdm base base-devel efibootmgr firefox git grub intel-ucode amd-ucode linux linux-firmware linux-headers mpv neovim net-tools networkmanager ntfs-3g obs-studio openssh papirus-icon-theme nautilus pipewire pipewire-alsa pipewire-jack pipewire-media-session pipewire-pulse &&
+pacstrap /mnt gnome-shell gnome-terminal gnome-tweaks eog gnome-control-center gdm base base-devel efibootmgr firefox git grub intel-ucode amd-ucode linux linux-firmware linux-headers mpv neovim net-tools networkmanager ntfs-3g obs-studio openssh papirus-icon-theme nautilus pipewire pipewire-alsa pipewire-jack pipewire-media-session pipewire-pulse &&
 arch-chroot /mnt grub-install /dev/sda &&
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg &&
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Tbilisi /etc/localtime &&
