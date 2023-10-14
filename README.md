@@ -6,7 +6,8 @@ This error typically indicates that the user running the program does not have t
 
 Grant permissions to the user: You can add the user to the 'dialout' group, which typically has access to the serial ports. Open a terminal and run the following command:
 
-sudo gpasswd --add arch dialout
+sudo groupadd dialout
+sudo usermod -aG dialout arch
 You may need to log out and log back in for the changes to take effect.
 
 Grant permissions to the port: Alternatively, you can grant read and write permissions to the specific port '/dev/ttyUSB0'. Open a terminal and run the following command:
